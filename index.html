@@ -9,48 +9,59 @@
 <body>
     <header>
         <h1>Natural Disaster Awareness Dashboard</h1>
-        <button id="menu-toggle">☰ Menu</button>
     </header>
-    <aside id="sidebar">
-        <nav>
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#hotlines">Emergency Hotlines</a></li>
-            </ul>
-            <h3>Categories</h3>
-            <ul>
-                <li><a href="#">Earthquakes</a></li>
-                <li><a href="#">Floods</a></li>
-                <li><a href="#">Hurricanes</a></li>
-                <li><a href="#">Wildfires</a></li>
-                <li><a href="#">Tornadoes</a></li>
-            </ul>
-            <h3>Emergency Hotlines</h3>
-            <ul>
-                <li>National Emergency: 911</li>
-                <li>FEMA: 1-800-621-3362</li>
-                <li>Red Cross: 1-800-RED-CROSS</li>
-            </ul>
-        </nav>
-    </aside>
-    <main id="dashboard">
-        <section id="highlights">
-            <h2>Latest Highlights</h2>
 
-            <div class="highlight-card">
-                <h3>Earthquake Preparedness</h3>
-                <p>Learn how to stay safe during an earthquake. Drop, cover, and hold on!</p>
+    <main id="dashboard">
+        <section id="welcome">
+            <h2>Home/Welcome</h2>
+            <p>Welcome to the Natural Disaster Awareness Dashboard. This platform provides essential information to help you stay informed and prepared for natural disasters. Our mission is to promote disaster awareness and equip communities with the knowledge needed to respond effectively to emergencies.</p>
+            <p>The importance of disaster awareness cannot be overstated. Natural disasters can strike unexpectedly, causing significant loss of life and property. By staying informed through this dashboard, you can take proactive steps to protect yourself, your family, and your community.</p>
+            <p>To stay safe: Always have an emergency kit ready, know your evacuation routes, stay tuned to official alerts, and follow instructions from local authorities. Remember, preparation today saves lives tomorrow.</p>
+        </section>
+
+        <section id="hotline-news">
+            <h2>Hotline News</h2>
+            <p>Stay updated with the latest verified information on natural disasters across the country.</p>
+            <div class="news-item">
+                <h3>Recent Earthquake in California</h3>
+                <p>A magnitude 5.2 earthquake struck Northern California yesterday. No major damage reported, but residents are advised to check for structural issues.</p>
+                <small>Source: USGS - Verified Update</small>
             </div>
-            <div class="highlight-card">
-                <h3>Flood Warnings</h3>
-                <p>Heavy rains expected. Evacuate low-lying areas immediately.</p>
+            <div class="news-item">
+                <h3>Flooding in Texas</h3>
+                <p>Heavy rainfall has caused flooding in several Texas counties. Evacuation orders are in place for low-lying areas.</p>
+                <small>Source: FEMA - Verified Update</small>
             </div>
-            <div class="highlight-card">
-                <h3>Hurricane Season Tips</h3>
-                <p>Prepare your home and emergency kit for the upcoming season.</p>
+            <div class="news-item">
+                <h3>Hurricane Preparedness</h3>
+                <p>Hurricane season is approaching. Coastal states are urged to review emergency plans and stock up on supplies.</p>
+                <small>Source: NOAA - Verified Update</small>
             </div>
-            
+        </section>
+
+        <section id="emergency-contact">
+            <h2>Emergency Contact</h2>
+            <p>In case of emergency, contact these key personnel and organizations for immediate assistance.</p>
+            <div class="contact-item">
+                <h3>National Emergency Services</h3>
+                <p>Dial 911 for immediate emergency response.</p>
+            </div>
+            <div class="contact-item">
+                <h3>FEMA Disaster Response</h3>
+                <p>Call 1-800-621-3362 for federal disaster assistance and information.</p>
+            </div>
+            <div class="contact-item">
+                <h3>American Red Cross</h3>
+                <p>Contact 1-800-RED-CROSS (1-800-733-2767) for disaster relief and support.</p>
+            </div>
+            <div class="contact-item">
+                <h3>Local Fire Department</h3>
+                <p>Reach out to your local fire department for rescue and firefighting services.</p>
+            </div>
+            <div class="contact-item">
+                <h3>Local Police Department</h3>
+                <p>Contact local law enforcement for security and evacuation assistance.</p>
+            </div>
         </section>
     </main>
     <script src="index.js"></script>
