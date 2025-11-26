@@ -105,9 +105,9 @@
                 type: "🏥"
             },
             {
-                name: "Bureau Of Fire Protection (BFP)",
-                number: "(02) 8426-0219 || (02) 8790-8400",
-                type: "🚒"
+                name: "PHIVOLCS",
+                number: "(02) 8426-1468 to 79",
+                type: "🌋"
             },
             {
                 name: "NDRRMC",
@@ -122,8 +122,14 @@
             {
                 name: "Philippines Red Cross (PRC)",
                 number: "9-143 || 8790-2300",
-                type: "🔴"
+                type: "❌"
             }
+            
+
+
+
+
+            
         ];
 
         // Render news articles

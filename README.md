@@ -25,3 +25,11 @@ Week 3-5 Development and Testing (Nov 20 - Dec 3)
 Week 6 QA Desition/Bug Fixing and Finalizing Output(Dec 4 - Dec 9)
 
 Final Day (Dec 10)
+
+
+
+
+
+EMERGENCY CONTACT SOURCES
+-https://assistance.ph/philippine-emergency-hotline-numbers/
+-https://e911.gov.ph/emergency-hotline-numbers/
