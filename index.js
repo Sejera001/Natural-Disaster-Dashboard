@@ -291,20 +291,68 @@
                     const href = link.getAttribute('href');
                     if (href.startsWith('#')) {
                         const targetId = href.substring(1);
-                        const targetElement = document.getElementById(targetId) || 
+                        const targetElement = document.getElementById(targetId) ||
                             (targetId === 'home' ? document.querySelector('.container') : null) ||
                             (targetId === 'disasters' ? document.querySelector('.news-section') : null) ||
                             (targetId === 'emergency' ? document.querySelector('.emergency-section') : null) ||
                             (targetId === 'about' ? document.querySelector('.about-section') : null);
-                        
+
                         if (targetElement) {
                             targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         }
                     }
-                    
+
                     // Update active state
                     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
                     link.classList.add('active');
                 });
             });
+
+            // Scroll-based active navigation
+            const sections = [
+                { id: 'home', element: document.querySelector('.container') },
+                { id: 'disasters', element: document.querySelector('.news-section') },
+                { id: 'emergency', element: document.querySelector('.emergency-section') },
+                { id: 'about', element: document.querySelector('.about-section') }
+            ];
+
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function updateActiveNav() {
+                const scrollPosition = window.scrollY + 100; // Offset for navbar height
+
+                sections.forEach(section => {
+                    if (section.element) {
+                        const sectionTop = section.element.offsetTop;
+                        const sectionHeight = section.element.offsetHeight;
+                        const sectionBottom = sectionTop + sectionHeight;
+
+                        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                            // Remove active class from all links
+                            navLinks.forEach(link => link.classList.remove('active'));
+
+                            // Add active class to current section link
+                            const activeLink = document.querySelector(`.nav-link[href="#${section.id}"]`);
+                            if (activeLink) {
+                                activeLink.classList.add('active');
+                            }
+                        }
+                    }
+                });
+
+                // Special case: if at very top of page, make home active
+                if (window.scrollY < 50) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const homeLink = document.querySelector('.nav-link[href="#home"]');
+                    if (homeLink) {
+                        homeLink.classList.add('active');
+                    }
+                }
+            }
+
+            // Listen for scroll events
+            window.addEventListener('scroll', updateActiveNav);
+
+            // Initial check
+            updateActiveNav();
         });
