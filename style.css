@@ -239,6 +239,18 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
+        .modal-news-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            margin: 15px auto;
+            display: block;
+        }
+
         .article-content {
             padding: 20px;
             display: flex;
@@ -594,8 +606,11 @@
 
         .modal-section p {
             color: #666;
-            line-height: 1.6;
-            margin: 8px 0;
+            line-height: 1.8;
+            margin: 12px 0;
+            text-align: justify;
+            text-justify: inter-word;
+            padding: 0 5px;
         }
 
         .stats-grid {

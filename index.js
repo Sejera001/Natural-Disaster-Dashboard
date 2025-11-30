@@ -188,7 +188,7 @@
             const article = disasterNews.find(a => a.id === articleId);
             if (!article) return;
 
-            document.getElementById('modalIcon').textContent = article.icon;
+            document.getElementById('modalIcon').innerHTML = article.icon;
             document.getElementById('modalCategory').textContent = article.category;
             document.getElementById('modalTitle').textContent = article.title;
             document.getElementById('modalDate').textContent = article.date;
